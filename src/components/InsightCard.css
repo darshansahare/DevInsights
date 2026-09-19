@@ -1,0 +1,42 @@
+/* InsightCard.css - Base card container */
+
+.insight-card {
+  border-radius: 1rem;
+  border: 1px solid #212634;
+  background-color: #12151e;
+  padding: 1.5rem;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  position: relative;
+}
+
+.insight-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.insight-card-title {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: #ffffff;
+  margin: 0;
+}
+
+.insight-card-description {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  margin-top: 0.25rem;
+  line-height: 1.5;
+}
+
+.insight-card-action {
+  flex-shrink: 0;
+}
+
+.insight-card-content {
+  width: 100%;
+}

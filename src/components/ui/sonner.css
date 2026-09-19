@@ -1,0 +1,192 @@
+/* sonner.css - Clean, Proper Alert & Toast System (No Neon Glow) */
+
+/* Container */
+[data-sonner-toaster] {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  z-index: 99999 !important;
+}
+
+/* Individual Toast Alert Base */
+[data-sonner-toaster] [data-sonner-toast] {
+  position: relative !important;
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 12px !important;
+  width: 360px !important;
+  max-width: calc(100vw - 32px) !important;
+  padding: 14px 16px !important;
+  border-radius: 10px !important;
+  background-color: #12151e !important;
+  border: 1px solid #232838 !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.45), 0 4px 10px -2px rgba(0, 0, 0, 0.25) !important;
+  color: #f1f5f9 !important;
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+  transition: border-color 0.15s ease, transform 0.15s ease !important;
+}
+
+/* --- Status Variants (Subtle border accents only, zero neon glow) --- */
+
+/* 1. Success */
+[data-sonner-toaster] [data-sonner-toast][data-type="success"] {
+  border-color: #1e3a30 !important;
+}
+
+/* 2. Error */
+[data-sonner-toaster] [data-sonner-toast][data-type="error"] {
+  border-color: #3b1e25 !important;
+}
+
+/* 3. Info */
+[data-sonner-toaster] [data-sonner-toast][data-type="info"] {
+  border-color: #1e2c3d !important;
+}
+
+/* 4. Warning */
+[data-sonner-toaster] [data-sonner-toast][data-type="warning"] {
+  border-color: #382c1a !important;
+}
+
+/* --- Icon Badges (Subtle, Clean Tint, No Glow) --- */
+
+[data-sonner-toaster] [data-sonner-toast] [data-icon] {
+  width: 28px !important;
+  height: 28px !important;
+  border-radius: 6px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+  margin-top: 1px !important;
+  background-color: #171b26 !important;
+  border: 1px solid #232838 !important;
+}
+
+/* Success Icon */
+[data-sonner-toaster] [data-sonner-toast][data-type="success"] [data-icon] {
+  background-color: rgba(16, 185, 129, 0.08) !important;
+  border-color: rgba(16, 185, 129, 0.2) !important;
+  color: #10b981 !important;
+}
+
+/* Error Icon */
+[data-sonner-toaster] [data-sonner-toast][data-type="error"] [data-icon] {
+  background-color: rgba(244, 63, 94, 0.08) !important;
+  border-color: rgba(244, 63, 94, 0.2) !important;
+  color: #f43f5e !important;
+}
+
+/* Info Icon */
+[data-sonner-toaster] [data-sonner-toast][data-type="info"] [data-icon] {
+  background-color: rgba(56, 189, 248, 0.08) !important;
+  border-color: rgba(56, 189, 248, 0.2) !important;
+  color: #38bdf8 !important;
+}
+
+/* Warning Icon */
+[data-sonner-toaster] [data-sonner-toast][data-type="warning"] [data-icon] {
+  background-color: rgba(245, 158, 11, 0.08) !important;
+  border-color: rgba(245, 158, 11, 0.2) !important;
+  color: #f59e0b !important;
+}
+
+/* Loading Icon */
+[data-sonner-toaster] [data-sonner-toast][data-type="loading"] [data-icon] {
+  background-color: rgba(148, 163, 184, 0.08) !important;
+  border-color: rgba(148, 163, 184, 0.2) !important;
+  color: #94a3b8 !important;
+}
+
+.sonner-spin {
+  animation: sonnerSpin 1s linear infinite;
+}
+
+@keyframes sonnerSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* --- Content Typography & Proper Spacing --- */
+
+[data-sonner-toaster] [data-sonner-toast] [data-content] {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 4px !important;
+  flex: 1 1 auto !important;
+  min-width: 0 !important;
+  padding-right: 4px !important;
+}
+
+[data-sonner-toaster] [data-sonner-toast] [data-title] {
+  font-size: 13.5px !important;
+  font-weight: 600 !important;
+  color: #f1f5f9 !important;
+  line-height: 1.35 !important;
+  margin: 0 !important;
+}
+
+[data-sonner-toaster] [data-sonner-toast] [data-description] {
+  font-size: 12.5px !important;
+  font-weight: 400 !important;
+  color: #94a3b8 !important;
+  line-height: 1.45 !important;
+  margin: 0 !important;
+  word-break: break-word !important;
+}
+
+[data-sonner-toaster] [data-sonner-toast] [data-description] code {
+  font-family: 'JetBrains Mono', monospace !important;
+  font-size: 11px !important;
+  background-color: #171b26 !important;
+  border: 1px solid #232838 !important;
+  padding: 1px 5px !important;
+  border-radius: 4px !important;
+  color: #cbd5e1 !important;
+}
+
+/* --- Close Button (Removed / Hidden) --- */
+
+[data-sonner-toaster] [data-sonner-toast] [data-close-button] {
+  display: none !important;
+}
+
+/* --- Action and Cancel Buttons --- */
+
+[data-sonner-toaster] [data-sonner-toast] [data-button] {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  padding: 5px 12px !important;
+  border-radius: 6px !important;
+  border: none !important;
+  cursor: pointer !important;
+  margin-top: 6px !important;
+  transition: opacity 0.15s ease !important;
+}
+
+[data-sonner-toaster] [data-sonner-toast] [data-button]:hover {
+  opacity: 0.9 !important;
+}
+
+[data-sonner-toaster] [data-sonner-toast] [data-cancel] {
+  background-color: transparent !important;
+  color: #94a3b8 !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  padding: 5px 12px !important;
+  border-radius: 6px !important;
+  border: 1px solid #232838 !important;
+  cursor: pointer !important;
+  margin-top: 6px !important;
+  transition: background-color 0.15s ease, color 0.15s ease !important;
+}
+
+[data-sonner-toaster] [data-sonner-toast] [data-cancel]:hover {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  color: #f1f5f9 !important;
+}

@@ -1,0 +1,343 @@
+/* Index.css - Dedicated styles for Home landing and layout */
+
+.page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #0b0d12;
+  color: #f3f4f6;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.page-main {
+  flex: 1 1 0%;
+  max-width: 80rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 640px) {
+  .page-main {
+    padding: 2.5rem 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .page-main {
+    padding: 3rem 1.5rem;
+  }
+}
+
+/* Back Button Bar */
+.back-button-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #1f2533;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .back-button-bar {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.back-to-search-btn {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  transition: color 0.15s ease;
+}
+
+.back-to-search-btn:hover {
+  color: #ffffff;
+}
+
+/* Hero Section (ExplainGitHub & Project One style) */
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 4rem;
+}
+
+@media (min-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 7fr 5fr;
+  }
+}
+
+.hero-left-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+
+.hero-headline {
+  font-size: 2.25rem;
+  line-height: 1.05;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+  margin: 0;
+}
+
+@media (min-width: 640px) {
+  .hero-headline {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-headline {
+    font-size: 4.25rem;
+  }
+}
+
+.hero-subtext {
+  margin-top: 1rem;
+  font-size: 1rem;
+  line-height: 2rem;
+  color: #94a3b8;
+  max-width: 42rem;
+  letter-spacing: -0.01em;
+}
+
+@media (min-width: 640px) {
+  .hero-subtext {
+    font-size: 1.125rem;
+  }
+}
+
+.proof-points-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #1d222e;
+  max-width: 32rem;
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+.proof-point-title {
+  display: block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* Workstation Card Mockup */
+.workstation-card-wrapper {
+  position: relative;
+  perspective: 1200px;
+}
+
+.workstation-card {
+  border-radius: 1rem;
+  border: 1px solid #232836;
+  background-color: #12151e;
+  padding: 1.25rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.45);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  transform-style: preserve-3d;
+  will-change: transform;
+  position: relative;
+  overflow: hidden;
+  cursor: default;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.workstation-card:hover {
+  border-color: #353e54;
+  box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.65), 0 0 0 1px rgba(16, 185, 129, 0.15);
+}
+
+@media (min-width: 640px) {
+  .workstation-card {
+    padding: 1.5rem;
+  }
+}
+
+.workstation-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #1c2230;
+}
+
+.workstation-dots {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  color: #cbd5e1;
+}
+
+.dot-red {
+  height: 0.625rem;
+  width: 0.625rem;
+  border-radius: 9999px;
+  background-color: #ff5f56;
+}
+
+.dot-yellow {
+  height: 0.625rem;
+  width: 0.625rem;
+  border-radius: 9999px;
+  background-color: #ffbd2e;
+}
+
+.dot-green {
+  height: 0.625rem;
+  width: 0.625rem;
+  border-radius: 9999px;
+  background-color: #27c93f;
+}
+
+.workstation-path {
+  margin-left: 0.5rem;
+  color: #94a3b8;
+}
+
+.status-ready-pill {
+  font-size: 0.625rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600;
+  padding: 0.125rem 0.5rem;
+  border-radius: 0.375rem;
+  background-color: rgba(16, 185, 129, 0.1);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.simulated-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+
+.simulated-stat-box {
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  background-color: #161a25;
+  border: 1px solid #212735;
+}
+
+.simulated-stat-label {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.6875rem;
+  color: #94a3b8;
+}
+
+.simulated-stat-number {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+  display: block;
+  margin-top: 0.25rem;
+}
+
+.simulated-lang-box {
+  padding: 1rem;
+  border-radius: 0.75rem;
+  background-color: #161a25;
+  border: 1px solid #212735;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.simulated-lang-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+}
+
+.simulated-lang-track {
+  height: 0.5rem;
+  width: 100%;
+  border-radius: 9999px;
+  background-color: #0b0d12;
+  display: flex;
+  overflow: hidden;
+}
+
+.simulated-legend {
+  display: flex;
+  gap: 0.75rem;
+  font-size: 0.625rem;
+  font-family: 'JetBrains Mono', monospace;
+  color: #94a3b8;
+}
+
+.simulated-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.simulated-callout {
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  background-color: #0b0d12;
+  border: 1px solid #212735;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+/* Footer */
+.footer-wrapper {
+  margin-top: auto;
+  border-top: 1px solid #1c2230;
+  padding: 1.5rem 0;
+  font-size: 0.75rem;
+  color: #64748b;
+  position: relative;
+  z-index: 1;
+}
+
+.footer-inner {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+@media (min-width: 640px) {
+  .footer-inner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

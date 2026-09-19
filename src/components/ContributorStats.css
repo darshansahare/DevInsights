@@ -1,0 +1,179 @@
+/* ContributorStats.css - Ranked contributor leaderboard */
+
+.leaderboard-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-size: 0.75rem;
+  font-family: 'JetBrains Mono', monospace;
+  color: #34d399;
+  background-color: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  padding: 0.25rem 0.625rem;
+  border-radius: 9999px;
+}
+
+.contributor-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  padding-top: 0.25rem;
+}
+
+.contributor-empty {
+  padding: 2rem;
+  text-align: center;
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+.contributor-row {
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  border: 1px solid #212735;
+  background-color: #161a25;
+  transition: all 0.15s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contributor-row:hover {
+  border-color: #2d3648;
+  background-color: #1a1f2c;
+}
+
+.contributor-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.contributor-info {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  min-width: 0;
+}
+
+.contributor-avatar {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 0.5rem;
+  border: 1px solid #283042;
+  flex-shrink: 0;
+}
+
+.contributor-avatar-fallback {
+  font-size: 0.625rem;
+  font-family: 'JetBrains Mono', monospace;
+  background-color: #1b202e;
+  color: #cbd5e1;
+}
+
+.contributor-name-link {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #e2e8f0;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  transition: color 0.15s ease;
+}
+
+.contributor-name-link:hover {
+  color: #34d399;
+}
+
+.contributor-ext-icon {
+  height: 0.625rem;
+  width: 0.625rem;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+  flex-shrink: 0;
+  color: #94a3b8;
+}
+
+.contributor-row:hover .contributor-ext-icon {
+  opacity: 1;
+}
+
+.contributor-stats-right {
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.contributor-commits-count {
+  font-size: 0.75rem;
+  font-weight: 700;
+  font-family: 'JetBrains Mono', monospace;
+  color: #f1f5f9;
+}
+
+.contributor-percentage {
+  font-size: 0.625rem;
+  color: #94a3b8;
+  display: block;
+}
+
+.contributor-progress-track {
+  width: 100%;
+  background-color: #0b0d12;
+  height: 0.375rem;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.contributor-progress-fill {
+  height: 100%;
+  background-color: #10b981;
+  border-radius: 9999px;
+  transition: width 0.5s ease;
+}
+
+.rank-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 1.25rem;
+  width: 1.25rem;
+  border-radius: 9999px;
+  font-size: 0.625rem;
+  font-weight: 700;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.rank-badge-gold {
+  background-color: rgba(245, 158, 11, 0.15);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  color: #fcd34d;
+}
+
+.rank-badge-silver {
+  background-color: rgba(203, 213, 225, 0.15);
+  border: 1px solid rgba(203, 213, 225, 0.3);
+  color: #e2e8f0;
+}
+
+.rank-badge-bronze {
+  background-color: rgba(180, 83, 9, 0.15);
+  border: 1px solid rgba(180, 83, 9, 0.3);
+  color: #fbbf24;
+}
+
+.rank-badge-default {
+  background-color: #1e2330;
+  color: #94a3b8;
+}
+
+.contributor-more-text {
+  text-align: center;
+  font-size: 0.6875rem;
+  color: #64748b;
+  padding-top: 0.25rem;
+}
